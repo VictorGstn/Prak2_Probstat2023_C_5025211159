@@ -16,6 +16,7 @@ print(dif)
 sd(dif)
 ```
 Pertama data disimpan menggunakan data.frame(). Untuk mendapatkan dif maka data y dikurangi oleh data x dan diassign ke suatu variabel dif. Menggunakan sd() maka dapat dicari standar deviasi dari dif. Didapatkan standar deviasi bernilai 7.838651
+
 ![image](https://github.com/VictorGstn/Prak2_Probstat2023_C_5025211159/assets/125529445/c19f8ec5-333f-42bc-93e8-3a7df1e9a759)
 
 ## 1b
@@ -25,7 +26,9 @@ library(BSDA)
 t.test(dif, alternative = "two.sided")
 ```
 Menggunakan library BSDA maka pada nilai dif akan dilakukan uji t. Didapatkan hasil berikut:
+
 ![image](https://github.com/VictorGstn/Prak2_Probstat2023_C_5025211159/assets/125529445/2021e603-3f66-4ca8-adf7-87c87cdb0adb)
+
 Didapatkan p-value = 0.0001373
 
 ## 1c
@@ -45,6 +48,7 @@ zsum.test(mean.x=23500, sigma.x = 3000, n.x = 100,
           conf.level = 0.05)
 ```
 Menggunakan uji z maka didapatkan p-value bernilai 2.867e-07 atau 0.0000002687. Berdasarkan hasil tersebut maka dapat dikatakan bahwa H0 ditolak dan H1 dapat diterima. Sehingga mobil dikemudikan rata-rata kurang dari 25.000 kilometer per tahun. 
+
 ![image](https://github.com/VictorGstn/Prak2_Probstat2023_C_5025211159/assets/125529445/533cf06a-67b4-4db0-8903-a552a4f8012a)
 
 # Soal3
@@ -73,7 +77,9 @@ tsum.test(mean.x=3.64, s.x = 1.67, n.x =20 ,
            var.equal = TRUE,
           conf.level = 0.95)
 ```
+
 ![image](https://github.com/VictorGstn/Prak2_Probstat2023_C_5025211159/assets/125529445/859d4e57-c7fe-43cf-99ba-21b3155e2fe7)
+
 Didapatkan p-value = 0.07381 dan t = 1.8304
 
 ## 3d
@@ -103,6 +109,7 @@ ggplot(data, aes(x = Glass, y = Temp, color = Light)) +
   geom_jitter(width = .02)
 ```
 Data dibaca menggunakan read.csv() lalu menggunakan ggplot dari library ggpubr dibuat plot sehingga menghasilkan plot berikut.
+
 ![image](https://github.com/VictorGstn/Prak2_Probstat2023_C_5025211159/assets/125529445/a15d0814-c2d7-4503-b971-1b5e593cae97)
 
 ## 4b
@@ -112,6 +119,7 @@ res <- aov(Light ~ Glass * Temp , data = data)
 summary(res)
 ```
 Uji anova dua arah dilakukan dengan fungsi aov() dan didapatkan summary nya menggunakan fungsi summary()
+
 ![image](https://github.com/VictorGstn/Prak2_Probstat2023_C_5025211159/assets/125529445/43837408-9528-40e9-88ec-693d6c4ed382)
 
 ## 4c
